@@ -1,7 +1,7 @@
 describe('bajaj ktm',()=>{
     it('test1',()=>{
         // cy.visit('https://stage-bajaj-ktmd2c.cartradeexchange.com/')
-        cy.visit('http://localhost:/8594')
+        cy.visit('http://localhost:8594/')
         cy.get(':nth-child(1) > .img-zoom > .vehicle-img').click({force:true})
         cy.wait(5000)
         // cy.get('.btn.btn-fill.proceed-btn.show').click({force:true})
