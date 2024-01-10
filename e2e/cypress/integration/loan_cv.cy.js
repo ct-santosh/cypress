@@ -3,7 +3,7 @@ describe('bajaj',()=>{
     it('cv',()=>{
         // cy.visit("https://stage_bajajloan.cartradeexchange.com/")
         // cy.visit("http://BajajLoanWeb:80")
-        cy.visit("http://localhost:8598")
+        cy.visit("http://localhost:8598/")
         // cy.visit("https://uat_bajajloan.cartradeexchange.com/")
         // cy.visit("https://php8-bajaj-loan.cartradeexchange.com/")
        cy.get('[style="position: relative;"] > #mobile').type('7730066959',{force: true})
