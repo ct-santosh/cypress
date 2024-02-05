@@ -5,22 +5,18 @@ describe('bajaj',()=>{
         cy.visit("https://stage_bajajloan.cartradeexchange.com/")
         cy.get('[style="position: relative;"] > #mobile').type('9999999995')
         cy.get('.login100-form-btn').click({force:true})
-         cy.get('#otp').type('123456')
+        cy.get('#otp').type('123456')
         cy.get('.submit_button').click({force:true})
-        cy.wait(2000)
         cy.get('#dealer_id').should('be.disabled').contains('RAGHAVENDRA MOTORS PVT LTD.')
         cy.get('#vehicle_type').should('be.disabled').contains('Motor Cycle')
         cy.get('#make').should('be.disabled'). contains('Bajaj')
-       
         cy.get('select#model.form-select').select('CT 110 X').should('have.value','101')
-
         cy.get('#variant').select('ES')
         cy.get('#title').select('Mr.')
         cy.get('#fname').type('pavani')
         cy.get('#mname').type('vasudha')
         cy.get('#lname').type('naramamidi')
         cy.get('.p-1 > #mobile').type('9')
-        // cy.get('#mobile').type('8')
         cy.get('.p-1 > #mobile').type(userID_Alpha())
         function userID_Alpha() {
             var text = "";
@@ -33,13 +29,7 @@ describe('bajaj',()=>{
         }
         cy.get('.p-1 > .btn').click({force:true})
         cy.get('#otp').type('1234')
-       
-        
-        //   cy.get('#verify_otp').click({force:true})
-        
-        // cy.get("button#verify_otp.btn.otherbank-offers.varify_otp.mt-3").click({force:true})
         cy.get('#verify_otp').click({force:true})
-        cy.wait(2000)
         cy.get('#email').click().type('asd@gmail.com')
         cy.get('.w-25 > #valid_aadhar').click({force:true})
         cy.get('.w-25 > #valid_pan').click({force:true})
@@ -77,7 +67,7 @@ describe('bajaj',()=>{
         cy.get('.w-25 > #payment_type').click({force:true})
         cy.get('#flexCheckDefault3').click({force:true})
         cy.get('.px-3 > :nth-child(2) > .step-footer > .btn').click({force:true})
-        cy.wait(5000)        
+        
         
     })
 })
